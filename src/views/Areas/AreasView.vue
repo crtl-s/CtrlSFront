@@ -37,6 +37,6 @@ const navigateToDetails = (id: number) => {
 
 <style>
 h1 {
-  color: #3A4C73;
+  color: #3a4c73;
 }
 </style>

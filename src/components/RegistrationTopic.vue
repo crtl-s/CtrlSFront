@@ -59,7 +59,7 @@
 h1,
 h2,
 p {
-  color: #3A4C73;
+  color: #3a4c73;
 }
 form {
   text-align: center;
@@ -72,10 +72,10 @@ select {
   font-size: 1em;
   height: 40px;
 }
-hr{
+hr {
   margin: auto;
   width: 80%;
-  color: #4B6295;
+  color: #4b6295;
   opacity: 1;
 }
 button {
@@ -86,8 +86,11 @@ button {
   margin: 15px;
   display: block;
   padding: 7px;
-
+  font-weight: bold;
   border: solid 1px #ff8c00;
+}
+button:hover {
+  background-color: #3a4c73;
 }
 #add-topic-btn:hover {
   background-color: #ffedd8;
