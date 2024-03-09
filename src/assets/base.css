@@ -85,3 +85,54 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+
+
+/* Custom styles for the button */
+.btn-custom {
+  border-radius: 0;
+  background-color: #637bb0;
+  color: white !important;
+  transition: background-color 0.3s;
+}
+/* Override Bootstrap's hover styles for the button */
+.btn-custom:hover {
+  background-color: #445a88 !important;
+  color: white !important;
+}
+.btn-custom-register {
+  border-radius: 0;
+  background-color: #be8bc7;
+  color: white !important;
+  transition: background-color 0.3s;
+}
+/* Override Bootstrap's hover styles for the button */
+.btn-custom-register:hover {
+  background-color: #a864b4 !important;
+  color: white !important;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+/*router-link hover disabled */
+.page-link, .page-link:visited, .page-link:hover, .page-link:active, .page-link:focus 
+{
+  outline: unset;
+  border: unset;
+}
+/*NavBar hover disabled for background and some perks*/
+.navbar-nav .nav-link,
+  .navbar-brand {
+    color: #fff !important; 
+    transition: color 0.3s; 
+  }
+.navbar-nav .nav-link:hover,
+  .navbar-brand:hover {
+    background-color: transparent !important; 
+    color: #bbc6dd !important;
+    transition: color 0.3s; 
+  }
+  
+
