@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import RegistrationBox from '../../components/RegistrationBox.vue'
 import RegistrationTopic from '../../components/RegistrationTopic.vue'
+import RegistrationLearningStyle from '../../components/RegistrationLearningStyle.vue'
 </script>
 
 <template>
@@ -23,6 +24,7 @@ import RegistrationTopic from '../../components/RegistrationTopic.vue'
 </template>
 
 <style scoped>
+
 #progressa-wave-img {
   margin-right: -3vw;
   z-index: 5;
@@ -30,9 +32,10 @@ import RegistrationTopic from '../../components/RegistrationTopic.vue'
 #registration-container {
   border: 1px solid black;
   width: 30vw;
+  background-color: white;
 }
 #registration-container h1 {
-  color: black;
+  color: #3A4C73;
 }
 @media only screen and (max-width: 1200px) {
   #registration-container {
