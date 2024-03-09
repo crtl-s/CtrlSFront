@@ -17,6 +17,14 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
+      path: '/login-register-prompt',
+      name: 'login-register-prompt',
+      component: () => import('../views/LoginRegisterPrompt/index-item.vue')
+    },
+    {
+      path: '/register-method',
+      name: 'register-method',
+      component: () => import('../views/RegisterMethod/index-item.vue')
       path: '/registration',
       name: 'registration',
       component: () => import('../views/RegistrationView/RegistrationView.vue')
