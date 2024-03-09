@@ -27,19 +27,23 @@ form {
   text-align: center;
 }
 form input {
-  width: 25vw;
+    width: 80%;
   margin: 10px;
   border: solid 1px black;
   padding: 5px;
 }
 button {
-  border: solid 1px black;
-  background-color: #a04cb0;
+    border: none;
+  background-color: #FF8C00;
   color: white;
   font-size: 1.3em;
+  font-weight: bold;
   text-transform: uppercase;
   margin: 15px;
   padding: 7px;
+}
+button:hover{
+    background-color: #3A4C73;
 }
 #row-registration {
   margin: 20px;

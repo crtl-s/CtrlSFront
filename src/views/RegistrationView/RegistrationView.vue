@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 setTimeout(() => {
   stopAnimation()
 }, 5000) // Adjust the delay as needed
+import RegistrationLearningStyle from '../../components/RegistrationLearningStyle.vue'
 </script>
 
 <template>
@@ -68,9 +69,10 @@ setTimeout(() => {
 #registration-container {
   border: 1px solid black;
   width: 30vw;
+  background-color: white;
 }
 #registration-container h1 {
-  color: black;
+  color: #3A4C73;
 }
 @media only screen and (max-width: 1200px) {
   #registration-container {

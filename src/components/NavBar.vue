@@ -1,6 +1,6 @@
 <template>
     <!-- Bootstrap Navbar -->
-    <nav style="margin-top: 0; background-color: #455892;" class="navbar navbar-expand-lg">
+    <nav style="margin-top: 0; background-color: #3A4C73; border-bottom: 4px solid #FF8C00;" class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">PROGRESSA</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
