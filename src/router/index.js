@@ -61,6 +61,11 @@ const router = createRouter({
       name: 'register-email',
       component: () => import('../views/RegisterEmail/index-item.vue')
     },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('../views/Profile/index-item.vue')
+    },
   ]
 })
 
