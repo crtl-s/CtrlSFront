@@ -32,6 +32,10 @@ const router = createRouter({
       component: () => import('../views/RegistrationView/RegistrationView.vue')
     },
     {
+      path: '/test-view',
+      name: 'test-view',
+      component: () => import('../views/TestView/index-item.vue')
+    },{
       path: '/areas',
       name: 'areas',
       component: () => import('../views/Areas/AreasView.vue')

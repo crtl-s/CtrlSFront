@@ -3,7 +3,7 @@
     <img
       alt="Vue logo"
       class="logo"
-      src="@/assets/images/hero/progressa-hero.svg"
+      src="@/assets/images/hero/Education-cuate 1.svg"
       width="500"
       height="500"
     />
