@@ -25,9 +25,16 @@ const router = createRouter({
       path: '/register-method',
       name: 'register-method',
       component: () => import('../views/RegisterMethod/index-item.vue')
+    },
+    {
       path: '/registration',
       name: 'registration',
       component: () => import('../views/RegistrationView/RegistrationView.vue')
+    },
+    {
+      path: '/test-view',
+      name: 'test-view',
+      component: () => import('../views/TestView/index-item.vue')
     },
   ]
 })

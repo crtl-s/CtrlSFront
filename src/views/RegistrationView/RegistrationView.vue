@@ -1,15 +1,39 @@
 <script setup lang="ts">
 import RegistrationBox from '../../components/RegistrationBox.vue'
 import RegistrationTopic from '../../components/RegistrationTopic.vue'
+
+// Get the image element
+const waveImg = document.getElementById('progressa-wave-img')
+
+// Function to add the class for animation
+function startAnimation() {
+  waveImg?.classList.add('move-up-down')
+}
+
+// Function to remove the class and stop the animation
+function stopAnimation() {
+  waveImg?.classList.remove('move-up-down')
+}
+
+// Example: Add the class when the component is mounted
+document.addEventListener('DOMContentLoaded', () => {
+  startAnimation()
+})
+
+// Example: Remove the class after a certain delay (e.g., 5 seconds)
+setTimeout(() => {
+  stopAnimation()
+}, 5000) // Adjust the delay as needed
 </script>
 
 <template>
-  <div class="container vh-100">
-    <div class="row d-flex align-items-center vh-100">
+  <div class="container">
+    <div style="margin-top: 6rem;" class="row d-flex align-items-center">
       <div class="col-5 d-flex justify-content-end">
         <img
           id="progressa-wave-img"
           src="../../assets/images/registration/progressa-wave-welcome.png"
+          class="move-up-down"
         />
       </div>
       <div class="col-7 d-flex justify-content-start text-center">
@@ -23,6 +47,20 @@ import RegistrationTopic from '../../components/RegistrationTopic.vue'
 </template>
 
 <style scoped>
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust the distance to move up and down */
+  }
+}
+
+.move-up-down {
+  animation: moveUpDown 2s infinite; /* Adjust the animation duration as needed */
+}
+
 #progressa-wave-img {
   margin-right: -3vw;
   z-index: 5;
