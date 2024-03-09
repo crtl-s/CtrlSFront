@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import StudyMaterialItem from '../../components/StudyMaterialItem.vue'
 import { useRouter } from 'vue-router'
 
@@ -30,7 +30,7 @@ const entries = [
   // Add more entries here based on your database
 ]
 
-const navigateToDetails = (id: number) => {
+const navigateToDetails = (id) => {
   router.push({ name: 'topics', params: { id } })
 }
 </script>
