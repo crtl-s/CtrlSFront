@@ -35,7 +35,8 @@ const router = createRouter({
       path: '/test-view',
       name: 'test-view',
       component: () => import('../views/TestView/index-item.vue')
-    },{
+    },
+    {
       path: '/areas',
       name: 'areas',
       component: () => import('../views/Areas/AreasView.vue')
@@ -44,6 +45,11 @@ const router = createRouter({
       path: '/topics',
       name: 'topics',
       component: () => import('../views/Topics/TopicsView.vue')
+    },
+    {
+      path: '/lesson',
+      name: 'lesson',
+      component: () => import('../views/LessonView/LessonView.vue')
     }
   ]
 })

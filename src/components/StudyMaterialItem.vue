@@ -10,10 +10,10 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { defineProps } from 'vue'
+<script setup>
+  import { defineProps } from 'vue';
 
-const props = defineProps({
-  entry: Object
-})
+  const props = defineProps({
+    entry: Object
+  });
 </script>

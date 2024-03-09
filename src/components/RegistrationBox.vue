@@ -27,14 +27,14 @@ form {
   text-align: center;
 }
 form input {
-    width: 80%;
+  width: 80%;
   margin: 10px;
   border: solid 1px black;
   padding: 5px;
 }
 button {
-    border: none;
-  background-color: #FF8C00;
+  border: none;
+  background-color: #ff8c00;
   color: white;
   font-size: 1.3em;
   font-weight: bold;
@@ -42,8 +42,8 @@ button {
   margin: 15px;
   padding: 7px;
 }
-button:hover{
-    background-color: #3A4C73;
+button:hover {
+  background-color: #3a4c73;
 }
 #row-registration {
   margin: 20px;

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import RegistrationBox from '../../components/RegistrationBox.vue'
 import RegistrationTopic from '../../components/RegistrationTopic.vue'
 
@@ -7,12 +7,16 @@ const waveImg = document.getElementById('progressa-wave-img')
 
 // Function to add the class for animation
 function startAnimation() {
-  waveImg?.classList.add('move-up-down')
+  if (waveImg) {
+    waveImg.classList.add('move-up-down')
+  }
 }
 
 // Function to remove the class and stop the animation
 function stopAnimation() {
-  waveImg?.classList.remove('move-up-down')
+  if (waveImg) {
+    waveImg.classList.remove('move-up-down')
+  }
 }
 
 // Example: Add the class when the component is mounted
@@ -24,23 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
 setTimeout(() => {
   stopAnimation()
 }, 5000) // Adjust the delay as needed
-import RegistrationLearningStyle from '../../components/RegistrationLearningStyle.vue'
 </script>
 
 <template>
   <div class="container">
-    <div style="margin-top: 6rem;" class="row d-flex align-items-center">
-      <div class="col-5 d-flex justify-content-end">
+    <div style="margin-top: 6rem" class="row d-flex align-items-center">
+      <div class="col-4 d-flex justify-content-end">
         <img
           id="progressa-wave-img"
           src="../../assets/images/registration/progressa-wave-welcome.png"
           class="move-up-down"
         />
       </div>
-      <div class="col-7 d-flex justify-content-start text-center">
+      <div class="col-8 d-flex justify-content-start text-center">
         <div id="registration-container">
           <h1 class="m-3">REGISTER</h1>
-          <RegistrationTopic />
+          <RegistrationBox />
         </div>
       </div>
     </div>
@@ -72,7 +75,7 @@ import RegistrationLearningStyle from '../../components/RegistrationLearningStyl
   background-color: white;
 }
 #registration-container h1 {
-  color: #3A4C73;
+  color: #3a4c73;
 }
 @media only screen and (max-width: 1200px) {
   #registration-container {
