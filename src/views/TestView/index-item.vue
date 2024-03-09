@@ -1,11 +1,11 @@
-<script setup lang="ts">
+<script setup>
 import TextTest from '../../components/TextTest.vue'
 import AudioTest from '../../components/AudioTest.vue'
 import ImageTest from '../../components/ImageTest.vue'
 </script>
 
 <template>
-    <TextTest />
-    <AudioTest />
-    <ImageTest />
+  <TextTest />
+  <AudioTest />
+  <ImageTest />
 </template>

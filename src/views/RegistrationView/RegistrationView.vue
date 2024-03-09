@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import RegistrationBox from '../../components/RegistrationBox.vue'
 import RegistrationTopic from '../../components/RegistrationTopic.vue'
 
@@ -7,12 +7,16 @@ const waveImg = document.getElementById('progressa-wave-img')
 
 // Function to add the class for animation
 function startAnimation() {
-  waveImg?.classList.add('move-up-down')
+  if (waveImg) {
+    waveImg.classList.add('move-up-down')
+  }
 }
 
 // Function to remove the class and stop the animation
 function stopAnimation() {
-  waveImg?.classList.remove('move-up-down')
+  if (waveImg) {
+    waveImg.classList.remove('move-up-down')
+  }
 }
 
 // Example: Add the class when the component is mounted

@@ -1,4 +1,4 @@
-<script setup lang="ts"></script>
+<script setup></script>
 
 <template>
   <div class="container d-flex flex-column justify-content-center align-items-center">
