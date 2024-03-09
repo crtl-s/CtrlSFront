@@ -50,7 +50,17 @@ const router = createRouter({
       path: '/lesson',
       name: 'lesson',
       component: () => import('../views/LessonView/LessonView.vue')
-    }
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/Login/index-item.vue')
+    },
+    {
+      path: '/register-email',
+      name: 'register-email',
+      component: () => import('../views/RegisterEmail/index-item.vue')
+    },
   ]
 })
 
