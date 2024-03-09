@@ -6,7 +6,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('../views/Home/index.vue')
+      component: () => import('../views/Home/index-item.vue')
     },
     {
       path: '/about',
@@ -15,6 +15,16 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/login-register-prompt',
+      name: 'login-register-prompt',
+      component: () => import('../views/LoginRegisterPrompt/index-item.vue')
+    },
+    {
+      path: '/register-method',
+      name: 'register-method',
+      component: () => import('../views/RegisterMethod/index-item.vue')
     },
   ]
 })
