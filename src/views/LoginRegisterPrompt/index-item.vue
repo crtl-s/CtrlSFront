@@ -8,7 +8,7 @@
     />
     <h1 style="color: black">Welcome, dear student, to Progressa</h1>
     <div class="button-container">
-      <router-link to="/register-method" class="page-link">
+      <router-link to="/registration" class="page-link">
         <button
           id="register-button-progressa"
           type="button"
@@ -18,7 +18,7 @@
           REGISTER
         </button>
       </router-link>
-      <router-link to="/about" class="page-link">
+      <router-link to="/login" class="page-link">
         <button
           id="login-button-progressa"
           type="button"
