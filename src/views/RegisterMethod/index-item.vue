@@ -5,7 +5,6 @@
       style="width: 16rem"
       type="button"
       class="btn btn-lg btn-custom m-3"
-      data-bs-toggle="button"
     >
       Through my school
     </button>
@@ -14,7 +13,6 @@
       style="width: 16rem"
       type="button"
       class="btn btn-lg btn-custom m-3"
-      data-bs-toggle="button"
     >
       With my personal email
     </button>

@@ -9,7 +9,6 @@
     <button
       class="navbar-toggler"
       type="button"
-      data-bs-toggle="collapse"
       data-bs-target="#navbarNav"
       aria-controls="navbarNav"
       aria-expanded="false"
@@ -20,10 +19,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/">Profile</a>
+          <a class="nav-link" href="/test-view">TestView????</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/">Start learning</a>
+          <a class="nav-link" href="/topics">Topics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/lesson-view">LessonView</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/areas">AreasView</a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">
