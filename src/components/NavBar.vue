@@ -20,10 +20,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/registration">Registration</a>
+          <a class="nav-link" href="/">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/test-view">TestView</a>
+          <a class="nav-link" href="/">Start learning</a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">
@@ -36,6 +36,4 @@
 </nav>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>

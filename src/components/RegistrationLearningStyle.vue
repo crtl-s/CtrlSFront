@@ -8,8 +8,8 @@
       <div>
         <select v-model="selectedOption">
           <option value="" disabled selected>Please select an option</option>
-          <option v-for="(option, index) in options" :key="index" :value="option">
-            {{ option }}
+          <option v-for="(option, index) in options" :key="index" :value="option.id">
+            {{ option.name }}
           </option>
         </select>
       </div>
@@ -54,11 +54,27 @@ button {
 </style>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
       selectedOption: '',
-      options: ['Visual learning', 'Auditory learning', 'Learning through analogy', 'Oversimplify']
+      options: []
+    }
+  },
+  mounted() {
+    this.fetchEducationalFields();
+  },
+  methods: {
+    fetchEducationalFields() {
+      axios.get('educationType')
+        .then(response => {
+          this.options = response.data;
+        })
+        .catch(error => {
+          console.error('Error fetching educational fields:', error);
+        });
     }
   }
 }

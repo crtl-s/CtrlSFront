@@ -4,21 +4,21 @@
         <div class="profile-card">
           <div class="profile-header">
             <img src="https://placekitten.com/150/150" alt="Profile Picture" />
-            <h2>{{ username }}</h2>
+            <h2>{{ name }}</h2>
             <p>{{ email }}</p>
           </div>
           <div class="profile-details">
             <div class="detail-item">
               <label>Username:</label>
-              <span>{{ username }}</span>
+              <span>{{ name }}</span>
             </div>
             <div class="detail-item">
               <label>Email:</label>
               <span>{{ email }}</span>
             </div>
             <div class="detail-item">
-              <label>Age:</label>
-              <span>{{ age }}</span>
+              <label>Date of Birth:</label>
+              <span>{{ date_of_birth }}</span>
             </div>
             <!-- Add more details as needed -->
           </div>
@@ -116,14 +116,20 @@
   </style>
   
   <script>
+
+  import axios from 'axios'
+
   export default {
     data() {
       return {
-        username: 'JohnDoe',
-        email: 'john.doe@example.com',
-        age: 25,
-        // Add more profile information as needed
+      name: "",
+      email: "",
+      date_of_birth: ""
       };
     },
-  };
+    created(){
+     this.name= localStorage.getItem('name');
+    this.email= localStorage.getItem('email');
+    this.date_of_birth= localStorage.getItem('date_of_birth');
+  }};
   </script>
