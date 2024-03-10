@@ -9,6 +9,7 @@
     >
       Through my school
     </button>
+    <router-link to="/register-email" class="page-link">
     <button
       style="width: 16rem"
       type="button"
@@ -17,5 +18,6 @@
     >
       With my personal email
     </button>
+    </router-link>
   </div>
 </template>

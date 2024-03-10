@@ -5,7 +5,7 @@ import ImageTest from '../../components/ImageTest.vue'
 </script>
 
 <template>
-  <TextTest />
-  <AudioTest />
-  <ImageTest />
+    <TextTest />
+    <AudioTest />
+    <ImageTest />
 </template>
