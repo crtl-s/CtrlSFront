@@ -32,6 +32,11 @@ const router = createRouter({
       component: () => import('../views/RegistrationView/RegistrationView.vue')
     },
     {
+      path: '/registration-learning-style',
+      name: 'registration-learning-style',
+      component: () => import('../views/RegistrationLearningStyle/RegistrationLStyleView.vue')
+    },
+    {
       path: '/test-view',
       name: 'test-view',
       component: () => import('../views/TestView/index-item.vue')
