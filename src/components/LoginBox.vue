@@ -1,69 +1,85 @@
 <template>
-    <div class="container">
-      <div class="row" id="row-login">
-        <div class="col vh-50">
-          <form @submit.prevent="login">
-            <input type="text" v-model="username" placeholder="Username" />
-            <input type="password" v-model="password" placeholder="Password" />
-            <button type="submit">Login</button>
-          </form>
-        </div>
+  <div class="container">
+    <div class="row" id="row-login">
+      <div class="col vh-50">
+        <form @submit.prevent="login">
+          <input type="text" v-model="email" placeholder="Email"/>
+          <input type="password" v-model="password" placeholder="Password"/>
+          <button @click="login">Login</button>
+        </form>
       </div>
     </div>
-  </template>
-  
-  <style scoped>
-  form {
-    text-align: center;
-  }
+  </div>
+</template>
+
+<style scoped>
+form {
+  text-align: center;
+}
+
+form input {
+  width: 80%;
+  margin: 10px;
+  border: solid 1px black;
+  padding: 5px;
+}
+
+button {
+  border: none;
+  background-color: #ff8c00;
+  color: white;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 15px;
+  padding: 7px;
+}
+
+button:hover {
+  background-color: #3a4c73;
+}
+
+#row-login {
+  margin: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
   form input {
-    width: 80%;
-    margin: 10px;
-    border: solid 1px black;
-    padding: 5px;
+    width: 65vw;
   }
-  button {
-    border: none;
-    background-color: #ff8c00;
-    color: white;
-    font-size: 1.3em;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 15px;
-    padding: 7px;
-  }
-  button:hover {
-    background-color: #3a4c73;
-  }
-  #row-login {
-    margin: 20px;
-  }
-  @media only screen and (max-width: 1200px) {
-    form input {
-      width: 65vw;
+}
+</style>
+
+<script>
+import axios from 'axios'
+import {inject} from "vue";
+import {app} from "../main.js"
+export default {
+  data() {
+    return {
+      email: '',
+      password: ''
+    }
+  },
+  methods: {
+    //TODO Snackbar sto sam ovdje stavila ne rade njih popraviti i redirect nakon uspješnog logina na homepage
+    login() {
+
+      axios.post('login', {
+        email: this.email,
+        password: this.password
+      }).then((res) => {
+        console.log(res.data);
+        let user = inject('user', null);
+        app.provide('user', res.data.user);
+        user.value = res.data.user;
+        this.$emit('show-snackbar', true, 'Successfully logged in.');
+      }).catch((err) => {
+        this.$emit('show-snackbar', false, 'Credentials are not correct!.');
+
+      });
+
     }
   }
-  </style>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        username: '',
-        password: ''
-      }
-    },
-    methods: {
-      login() {
-        // Add your login logic here
-        // For demonstration purposes, we'll just log the credentials
-        console.log('Username:', this.username);
-        console.log('Password:', this.password);
-  
-        // Reset the form after login
-        this.username = '';
-        this.password = '';
-      }
-    }
-  }
-  </script>
+}
+</script>
