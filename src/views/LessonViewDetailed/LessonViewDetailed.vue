@@ -1,7 +1,16 @@
 <template>
   <div class="container mt-4">
     <div class="row mt-5">
-      <div class="col-3"></div>
+      <div class="col-3" id="links-colors">
+        <h2>Lorem ipsum dolor</h2>
+        <h3>consectetur adipiscing</h3>
+        <h3>facilisis, massa</h3>
+        <h2>Lorem ipsum dolor</h2>
+        <h3>consectetur adipiscing</h3>
+        <h4>facilisis, massa</h4>
+        <h3>consectetur adipiscing</h3>
+        <h3>facilisis, massa</h3>
+      </div>
       <div class="col-7">
         <div class="row">
           <h1>Lesson title</h1>
@@ -53,8 +62,30 @@ body {
   background-image: url('/src/assets/images/backgrounds/mid-bg.svg');
   background-position: center center;
   background-size: cover;
+  color: white;
+}
+.container{
+  background-color: #27334C;
 }
 .row {
-  color: #3a4c73 !important;
+  color: white;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+#links-colors{
+  color: #FF8C00;
+  padding-top: 60px;
+}
+#links-colors h1{
+  font-size: 1.1em;
+}
+#links-colors h2{
+  font-size: 0.85em;
+}
+#links-colors h3{
+  font-size: 0.7em;
+}
+#links-colors h4{
+  font-size: 0.6em;
 }
 </style>
