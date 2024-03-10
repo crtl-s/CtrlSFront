@@ -57,11 +57,11 @@ const router = createRouter({
       component: () => import('../views/DetailsView/DetailsView.vue'),
       props: true
     },
-    // {
-    //   path: '/lesson',
-    //   name: 'lesson',
-    //   component: () => import('../views/LessonView/LessonView.vue')
-    // },
+    {
+      path: '/lessonDetail',
+      name: 'lessonDetail',
+      component: () => import('../views/LessonViewDetailed/LessonViewDetailed.vue')
+    },
     {
       path: '/login',
       name: 'login',

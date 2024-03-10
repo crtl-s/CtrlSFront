@@ -34,7 +34,9 @@
           <input type="password" v-model="repeatPassword" placeholder="Repeat password" />
           <select v-model="educationalFieldId" id="educational-fields">
             <option value="" disabled selected>Select an option</option>
-            <option value="bla">bla</option>
+            <option value="osnovna">Osnovnoškolac</option>
+            <option value="srednja">Srednješkolac</option>
+            <option value="faks">Student</option>
             <option v-for="field in educationalFields" :key="field.id" :value="field.id">
               {{ field.name }}
             </option>
