@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row" id="row-login">
       <div class="col vh-50">
-        <form @submit.prevent="login">
+        <form>
           <input type="text" v-model="email" placeholder="Email"/>
           <input type="password" v-model="password" placeholder="Password"/>
           <button @click="login">Login</button>
@@ -49,30 +49,35 @@ button:hover {
   }
 }
 </style>
-
-<script>
+<script setup>
 import axios from 'axios'
 import {inject} from "vue";
-import {app} from "../main.js"
+
+</script>
+<script>
+
 export default {
   data() {
     return {
       email: '',
-      password: ''
+      password: '',
+      user: null
     }
   },
   methods: {
     //TODO Snackbar sto sam ovdje stavila ne rade njih popraviti i redirect nakon uspješnog logina na homepage
     login() {
-
+      event.preventDefault();
       axios.post('login', {
         email: this.email,
         password: this.password
       }).then((res) => {
         console.log(res.data);
-        let user = inject('user', null);
-        app.provide('user', res.data.user);
-        user.value = res.data.user;
+        localStorage.setItem('id', res.data.user.id);
+        localStorage.setItem('name', res.data.user.name);
+        localStorage.setItem('email', res.data.user.email);
+        localStorage.setItem('email', res.data.user.email);
+      
         this.$emit('show-snackbar', true, 'Successfully logged in.');
       }).catch((err) => {
         this.$emit('show-snackbar', false, 'Credentials are not correct!.');

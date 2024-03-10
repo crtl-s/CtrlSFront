@@ -4,21 +4,21 @@
         <div class="profile-card">
           <div class="profile-header">
             <img src="https://placekitten.com/150/150" alt="Profile Picture" />
-            <h2>{{ user.name }}</h2>
-            <p>{{ user.email }}</p>
+            <h2>{{ name }}</h2>
+            <p>{{ email }}</p>
           </div>
           <div class="profile-details">
             <div class="detail-item">
               <label>Username:</label>
-              <span>{{ user.name }}</span>
+              <span>{{ name }}</span>
             </div>
             <div class="detail-item">
               <label>Email:</label>
-              <span>{{ user.email }}</span>
+              <span>{{ email }}</span>
             </div>
             <div class="detail-item">
               <label>Date of Birth:</label>
-              <span>{{ user.date_of_birth }}</span>
+              <span>{{ date_of_birth }}</span>
             </div>
             <!-- Add more details as needed -->
           </div>
@@ -116,22 +116,20 @@
   </style>
   
   <script>
-  import {inject} from "vue";
+
+  import axios from 'axios'
 
   export default {
     data() {
       return {
-       user:null
+      name: "",
+      email: "",
+      date_of_birth: ""
       };
     },
     created(){
-
-      this.user = inject('user', null);
-      console.log(this.user, 'user');
-      if(this.user == null){
-        //TODO redirect to login
-      //OVO NESTO NE VALJA   this.$router.push('/login')
-      }
-    }
-  };
+     this.name= localStorage.getItem('name');
+    this.email= localStorage.getItem('email');
+    this.date_of_birth= localStorage.getItem('date_of_birth');
+  }};
   </script>
