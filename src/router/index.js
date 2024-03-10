@@ -9,12 +9,12 @@ const router = createRouter({
       component: () => import('../views/Home/index-item.vue')
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/lesson-view',
+      name: 'lesson-view',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/LessonView.vue')
     },
     {
       path: '/login-register-prompt',
@@ -47,10 +47,16 @@ const router = createRouter({
       component: () => import('../views/Topics/TopicsView.vue')
     },
     {
-      path: '/lesson',
-      name: 'lesson',
-      component: () => import('../views/LessonView/LessonView.vue')
+      path: '/details/:entryId',
+      name: 'details',
+      component: () => import('../views/DetailsView/DetailsView.vue'),
+      props: true
     },
+    // {
+    //   path: '/lesson',
+    //   name: 'lesson',
+    //   component: () => import('../views/LessonView/LessonView.vue')
+    // },
     {
       path: '/login',
       name: 'login',
@@ -65,7 +71,7 @@ const router = createRouter({
       path: '/profile',
       name: 'profile',
       component: () => import('../views/Profile/index-item.vue')
-    },
+    }
   ]
 })
 
