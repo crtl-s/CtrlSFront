@@ -48,7 +48,6 @@ const playAudio = () => {
         style="width: 10rem; height: 3rem"
         type="button"
         class="btn btn-lg btn-custom mx-2"
-        data-bs-toggle="button"
       >
         NEXT
       </button>

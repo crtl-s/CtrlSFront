@@ -13,7 +13,6 @@
           id="register-button-progressa"
           type="button"
           class="btn btn-lg btn-custom-register mx-2"
-          data-bs-toggle="button"
         >
           REGISTER
         </button>
@@ -23,7 +22,6 @@
           id="login-button-progressa"
           type="button"
           class="btn btn-lg btn-custom mx-2"
-          data-bs-toggle="button"
         >
           LOGIN
         </button>

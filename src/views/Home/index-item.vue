@@ -13,7 +13,6 @@
       <button
         type="button"
         class="btn btn-lg btn-custom"
-        data-bs-toggle="button"
         id="homepage-button"
       >
         Start my future

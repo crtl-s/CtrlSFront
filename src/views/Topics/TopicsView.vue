@@ -6,7 +6,7 @@
         v-for="(entry, index) in entries"
         :key="index"
         :entry="entry"
-        @click="navigateToDetails"
+        @click="navigateToDetails(entry)"
       />
     </div>
   </div>
@@ -15,24 +15,54 @@
 <script setup>
 import StudyMaterialItem from '../../components/StudyMaterialItem.vue'
 import { useRouter } from 'vue-router'
+import { ref, onMounted } from 'vue'
 
 const router = useRouter()
+const entries = ref([])
 
-const entries = [
-  { id: 1, title: 'Entry 1', content: 'Content 1', condition: true },
-  { id: 2, title: 'Entry 2', content: 'Content 2', condition: false },
-  { id: 3, title: 'Entry 3', content: 'Content 3', condition: true },
-  { id: 4, title: 'Entry 3', content: 'Content 3', condition: true },
-  { id: 5, title: 'Entry 1', content: 'Content 1', condition: true },
-  { id: 6, title: 'Entry 2', content: 'Content 2', condition: false },
-  { id: 7, title: 'Entry 3', content: 'Content 3', condition: true },
-  { id: 8, title: 'Entry 3', content: 'Content 3', condition: true }
-  // Add more entries here based on your database
-]
-
-const navigateToDetails = (id) => {
-  router.push({ name: 'YourComponent', params: { id } })
+const navigateToDetails = (entry) => {
+  console.log('Navigating to details:', entry);
+  const plainEntry = Object.assign({}, entry);
+  console.log('Navigating to details AFTER TRANSFORMATION:', plainEntry);
+  router.push({
+    name: 'details', // Replace with the name of the details route
+    params: { entryId: plainEntry } // Pass entry.id as a route parameter
+  })
 }
+
+const fetchStudentRoadmap = async () => {
+  try {
+    console.log('ssss')
+
+    const response = await fetch('http://localhost:3000/studentRoadmap', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        tema: 'Flutter state menangment',
+        roadmap: [
+          { title: 'Osnovno o flutteru', znanje: 'HIGH' },
+          { title: 'Flutter widgeti', znanje: 'MEDIUM' },
+          { title: 'BLoC', znanje: 'LOW' }
+        ]
+      })
+    })
+
+    console.log(response)
+
+    const roadmapData = await response.json()
+    const trimmed = JSON.parse(roadmapData['response'].slice(7, -3))
+    console.log(trimmed[1]['lekcija'][1]['title'])
+    entries.value = trimmed[1]['lekcija']
+  } catch (error) {
+    console.error('Error fetching student roadmap:', error)
+  }
+}
+
+onMounted(() => {
+  fetchStudentRoadmap()
+})
 </script>
 
 <style>
